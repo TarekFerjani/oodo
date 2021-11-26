@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  web:
+    image: odoo:14.0
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+  db:
+    image: postgres:11
+    environment:
+      -POSTGRESQL_ADDON_DB="bjaqtx5ddluj0ohhi6y1"
+      -POSTGRESQL_ADDON_HOST="bjaqtx5ddluj0ohhi6y1-postgresql.services.clever-cloud.com"
+      -POSTGRESQL_ADDON_PASSWORD="jn2xhOHJLuUbmbVVqByp"
+      -POSTGRESQL_ADDON_PORT="5432"
+      -POSTGRESQL_ADDON_URI="postgresql://u9syy2xulioyuqwwwqgf:jn2xhOHJLuUbmbVVqByp@bjaqtx5ddluj0ohhi6y1-postgresql.services.clever-cloud.com:5432/bjaqtx5ddluj0ohhi6y1"
+      -POSTGRESQL_ADDON_USER="u9syy2xulioyuqwwwqgf"
+      -POSTGRESQL_ADDON_VERSION="11"
