@@ -1,6 +1,6 @@
-FROM vauxoo/docker-ubuntu-base:20.04
+FROM odoo:latest
 MAINTAINER Tulio Ruiz <tulio@vauxoo.com>
+RUN -p 8080:8080 --name odoo --link db:db -t odoo
 
-COPY scripts/* /usr/share/vx-docker-internal/odoo150/
-RUN bash /usr/share/vx-docker-internal/odoo150/build-image.sh
+
 EXPOSE 8080
