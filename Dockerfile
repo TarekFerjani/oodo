@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM odoo
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 # Generate locale C.UTF-8 for postgres and general locale data
