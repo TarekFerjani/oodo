@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  web:
+    image: odoo:14.0
+    depends_on:
+      - mydb
+    ports:
+      - "8069:8069"
+    environment:
+    - HOST=bjaqtx5ddluj0ohhi6y1-postgresql.services.clever-cloud.com
+    - USER=u9syy2xulioyuqwwwqgf
+    - PASSWORD=jn2xhOHJLuUbmbVVqByp
+  mydb:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=myodoo
+      - POSTGRES_USER=odoo
