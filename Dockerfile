@@ -1,4 +1,4 @@
-FROM  scratch
+FROM  ubuntu:latest
 LABEL maintainer "tferjani@3s.com.tn"
 RUN apt-get update
 RUN apt-get upgrade -y
