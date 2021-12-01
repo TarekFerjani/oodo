@@ -6,5 +6,5 @@ COPY ./odoo.sh /root
 
 EXPOSE 8080
 
-ENTRYPOINT ["/odoo.sh"]
+ENTRYPOINT ["./odoo.sh"]
 CMD ["odoo"]
