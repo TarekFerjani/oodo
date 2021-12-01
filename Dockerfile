@@ -1,7 +1,7 @@
 FROM debian:10
 MAINTAINER Tulio Ruiz <tulio@vauxoo.com>
+ADD odoo.sh /
+ENTRYPOINT ["/bin/bash", "/odoo.sh"]
 
-COPY ./odoo.sh /
-RUN ./odoo.sh
 
 EXPOSE 8080 8081 8082
