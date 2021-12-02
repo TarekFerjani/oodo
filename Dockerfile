@@ -3,4 +3,4 @@ MAINTAINER Tulio Ruiz <tulio@vauxoo.com>
 
 COPY scripts/* /usr/share/vx-docker-internal/odoo150/
 RUN bash /usr/share/vx-docker-internal/odoo150/build-image.sh
-EXPOSE 8080 8081 8082
+EXPOSE 8069 8070 8071
