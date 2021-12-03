@@ -1,6 +1,4 @@
-FROM vauxoo/docker-ubuntu-base:20.04
+FROM vauxoo/odoo-150-image
 MAINTAINER Tulio Ruiz <tulio@vauxoo.com>
 
-COPY scripts/* /usr/share/vx-docker-internal/odoo150/
-RUN bash /usr/share/vx-docker-internal/odoo150/build-image.sh
-EXPOSE 8069 8070 8071
+EXPOSE 8080 8081 8082
