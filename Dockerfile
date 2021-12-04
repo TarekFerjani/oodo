@@ -1,5 +1,4 @@
-FROM debian:10.0
-COPY ./odoo.sh /
-RUN chmod +x odoo.sh
-RUN bash -c "/odoo.sh"
-EXPOSE 8080 8081 8082
+FROM odoo:latest
+RUN docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:13
+RUN docker run -p 8080:8069 --name odoo --link db:db -t odoo
+EXPOSE 8080 
