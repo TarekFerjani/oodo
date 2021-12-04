@@ -1,3 +1,3 @@
-FROM odoo:latest
-FROM postgres:latest
+FROM  ferjani90/odoo
+
 EXPOSE 8080 
