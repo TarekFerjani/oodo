@@ -1,2 +1,4 @@
-FROM odoo:latest
-EXPOSE 8069
+FROM ferjani90/web
+EXPOSE 8080
+FROM ferjani90/db
+EXPOSE 5432
