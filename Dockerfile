@@ -1,7 +1,7 @@
 FROM debian:10.0
 
 
-COPY odoo.sh /root
+COPY odoo.sh ./root
 RUN /bin/bash -c 'chmod +x odoo.sh'
 CMD [ "/bin/sh", "odoo.sh" ]
 
